@@ -35,6 +35,9 @@ jobs:
           distribution: 'adopt'
           java-version: '11'
 
+      - name: Grant execute permission for Gradle Wrapper
+        run: chmod +x ./gradlew
+        
       - name: Compile Java code with Gradle
         run: ./gradlew clean build
 
