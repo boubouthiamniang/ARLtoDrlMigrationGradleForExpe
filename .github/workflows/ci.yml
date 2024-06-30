@@ -37,7 +37,10 @@ jobs:
 
       - name: Grant execute permission for Gradle Wrapper
         run: chmod +x ./gradlew
-        
+
+      - name: Verify Gradle Wrapper permission
+        run: ls -l gradlew
+
       - name: Compile Java code with Gradle
         run: ./gradlew clean build
 
